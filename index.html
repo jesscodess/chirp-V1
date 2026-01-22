@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chirp</title>
+    <link href="index.css" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+
+        <div class="site-header">
+
+          <img class="header-image" src="./img/header-bird.png" alt="A yellow bird sits on a tree branch with pink flowers. Photo by Boris Smokrovic on Unsplash." width="1850px auto"/>
+          <h1>chirp</h1>
+          <p class="site-description">Listen to bird sounds from around the world</p>
+
+        </div>
+
+        <form class="search" id="bird-form">
+          <div class="form-group">
+            <input
+                type="text"
+                id="bird"
+                placeholder="Search bird name..."
+            />
+          </div>
+            <button id="submit-button" type="submit">Search</button>
+        </form>
+
+        <ol id="birds">
+            
+        </ol>
+
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
