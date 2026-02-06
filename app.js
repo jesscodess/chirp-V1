@@ -5,43 +5,44 @@ const resultList = document.getElementById("birds");
 let apiRequest = new XMLHttpRequest();
 
 function getData() {
-      birdForm.addEventListener("submit", ($event) => {
-      $event.preventDefault();
-      resultList.innerHTML = "Loading..."
-      const searchedBird = birdInput.value;
-      apiRequest.open('GET', 'https://xeno-canto.org/api/3/recordings?query=en:' + searchedBird + '&per_page=50&page=1&key=10086c11aefae3c85c6673f71fd634f143b0468d');
-      apiRequest.send()});
-    };
+    birdForm.addEventListener("submit", ($event) => {
+    $event.preventDefault();
+    resultList.innerHTML = "Loading..."
+    const searchedBird = birdInput.value;
+    apiRequest.open('GET', 'https://xeno-canto.org/api/3/recordings?query=en:' + searchedBird + '&per_page=50&page=1&key=10086c11aefae3c85c6673f71fd634f143b0468d');
+    apiRequest.send()
+    });
+  };
 
 function renderData () {
-  apiRequest.onreadystatechange = () => {
-    if (apiRequest.readyState === 4) {
-      const response = JSON.parse(apiRequest.response);
-      resultList.innerHTML =
-      `
-      <div class="result-cards">
-        <div class="card">
-        <iframe src='https:${response.recordings[0].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
+    apiRequest.onreadystatechange = () => {
+      if (apiRequest.readyState === 4) {
+        const response = JSON.parse(apiRequest.response);
+        resultList.innerHTML =
+        `
+        <div class="result-cards">
+          <div class="card">
+            <iframe src='https:${response.recordings[0].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
+          </div>
+          <div class="card">
+            <iframe src='https:${response.recordings[1].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
+          </div>
+          <div class="card">
+            <iframe src='https:${response.recordings[2].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
+          </div>
+          <div class="card">
+            <iframe src='https:${response.recordings[3].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
+          </div>
+          <div class="card">
+            <iframe src='https:${response.recordings[4].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
+          </div>
+          <div class="card">
+            <iframe src='https:${response.recordings[5].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
+          </div>
         </div>
-        <div class="card">
-        <iframe src='https:${response.recordings[1].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
-        </div>
-        <div class="card">
-        <iframe src='https:${response.recordings[2].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
-        </div>
-        <div class="card">
-        <iframe src='https:${response.recordings[3].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
-        </div>
-        <div class="card">
-        <iframe src='https:${response.recordings[4].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
-        </div>
-        <div class="card">
-        <iframe src='https:${response.recordings[5].url}/embed?simple=1' scrolling='no' frameborder='0' width='500' height='200'></iframe>
-        </div>
-      </div>
-      `
-    }
-  }};
+        `
+      }
+    }};
 
 getData();
 renderData();
