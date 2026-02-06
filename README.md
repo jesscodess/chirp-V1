@@ -9,7 +9,7 @@ chirp is live on Github pages on [this link](https://jesscodess.github.io/chirp-
 
 ---
 
-chirp é uma aplicação web simples que permite que usuários busquem e ouçam sons de diferentes espécies de pássaros do mundo todo. Para isso, utiliza a API [Xenocanto]((https://xeno-canto.org/explore/api).
+chirp é uma aplicação web simples que permite que usuários busquem e ouçam sons de diferentes espécies de pássaros do mundo todo. Para isso, utiliza a API [Xenocanto](https://xeno-canto.org/explore/api).
 Este projeto é motivado pela fascinação da autora com a natureza, por sua crença profunda na educação e seu interesse em utilizar a tecnologia para criar ferramentas de aprendizado.
 
 Atualmente, chirp é feito apenas com JavaScript vanilla. O objetivo da autora é continuar a atualizar e melhorar o projeto utilizando diferentes métodos e frameworks/bibliotecas. A intenção é que se torne uma demonstração da evolução e do conhecimento em expansão da autora.
