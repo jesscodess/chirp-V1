@@ -1,6 +1,6 @@
 const birdForm = document.getElementById("bird-form");
-const birdInput = document.getElementById("bird");
-const resultList = document.getElementById("birds");
+const birdInput = document.getElementById("searched-bird");
+const resultList = document.getElementById("bird-results");
 
 let apiRequest = new XMLHttpRequest();
 
